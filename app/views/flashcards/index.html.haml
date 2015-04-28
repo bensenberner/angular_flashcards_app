@@ -1,0 +1,22 @@
+%div{"ng-app" => "flashcardApp"}
+  %div{"ng-controller" => "flashcardCtrl"}
+    %form{:action => "demo_form.asp"}
+    Question
+    %input{:name => "fname", :type => "text", 'ng-model' => 'question'}
+    %br
+    Category
+    %input{:name => "fname", :type => "text", 'ng-model' => 'category'}
+    %br
+    Answer 1
+    %input{:name => "fname", :type => "text", 'ng-model' => 'answers[0]'}
+    %br
+    Answer 2
+    %input{:name => "fname", :type => "text", 'ng-model' => 'answers[1]'}
+    %br
+    Answer 3
+    %input{:name => "fname", :type => "text", 'ng-model' => 'answers[2]'}
+    %br
+    Answer 4
+    %input{:name => "fname", :type => "text", 'ng-model' => 'answers[3]'}
+    %br
+    %input{:type => "submit", :value => "Submit", 'ng-click' => 'createFlashcard(question, category, answers)'}
