@@ -6,6 +6,7 @@ class AnswersController < ApplicationController
   def create
   	@answer = Answer.new
   	@answer.text = params[:text]
+    @answer.correct = params[:correct]
   	@answer.flashcard_id = params[:flashcard_id]
   	begin
   		@answer.save
